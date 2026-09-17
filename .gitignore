@@ -1,0 +1,15 @@
+# Node
+node_modules/
+frontend/dist/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Go
+backend/*.exe
+
+# OS / editor
+.DS_Store
+.vscode/
