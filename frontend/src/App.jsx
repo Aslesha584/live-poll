@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-const API = "http://localhost:5000/api";
+const API = "https://live-poll-backend-kjlc.onrender.com/api";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -58,8 +57,8 @@ function App() {
     if (page !== "poll" || !pollId) return;
 
     const ws = new WebSocket(
-      `ws://localhost:5000/api/polls/${pollId}/ws`
-    );
+  `wss://live-poll-backend-kjlc.onrender.com/api/polls/${pollId}/ws`
+);
 
     ws.onmessage = (event) => {
       try {
